@@ -103,9 +103,9 @@ Friend Class crviewer
         pass = sr.ReadLine()
 
 
-        server = "ACCPAC" 'Decryption(server, secretkey)
-        uid = "sa" 'Decryption(uid, secretkey)
-        pass = "P@$$w0rd" 'Decryption(pass, secretkey)
+        server = Decryption(server, secretkey)
+        uid = Decryption(uid, secretkey)
+        pass = Decryption(pass, secretkey)
 
         Dim cons As String = "" '"Data Source =(Local); DataBase =" & custstatement.compid & "; User Id =" & uid & "; Password =" & pass & ";"
 
@@ -195,7 +195,7 @@ Friend Class crviewer
 
 
 
-            rdoc.Load("reports\GLPTLSOPTPROV.rpt")
+            rdoc.Load("reports\GLTRIALOPTRAMALLPROV.rpt")
 
 
             Dim tabs As Tables = rdoc.Database.Tables
@@ -266,19 +266,19 @@ Friend Class crviewer
 
             Dim entity As String = ""
             If crbram = True Then
-                entity = "'RAMDAT', "
+                entity = "RAMDAT,"
             End If
             If crbgen = True Then
-                entity = entity + "'GENDAT',"
+                entity = entity + "GENDAT,"
             End If
             If crbjor = True Then
-                entity = entity + "'JORDAT',"
+                entity = entity + "JORDAT,"
             End If
             If crbocj = True Then
-                entity = entity + "'OCJDAT',"
+                entity = entity + "OCJDAT,"
             End If
             If crbleb = True Then
-                entity = entity + "'LEBDAT',"
+                entity = entity + "LEBDAT,"
             End If
             entity = entity.Substring(0, entity.Length() - 1)
             rdoc.SetParameterValue("fromdate", cfdate)

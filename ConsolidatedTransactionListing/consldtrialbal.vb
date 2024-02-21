@@ -1,7 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
 Imports acc = ACCPAC.Advantage
 
-Public Class consldtranslist
+Public Class consldtrialbal
     Public frmcust As String
     Public Tocust As String
     Public fdate As String

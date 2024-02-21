@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class consldtranslist
+Partial Class consldtrialbal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class consldtranslist
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(consldtranslist))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(consldtrialbal))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btfind = New System.Windows.Forms.Button()
         Me.Txttoacct = New System.Windows.Forms.TextBox()
@@ -1920,7 +1920,7 @@ Partial Class consldtranslist
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Type"
         '
-        'consldtranslist
+        'consldtrialbal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1934,7 +1934,7 @@ Partial Class consldtranslist
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "consldtranslist"
+        Me.Name = "consldtrialbal"
         Me.Text = "Consolidated Transaction Listing"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

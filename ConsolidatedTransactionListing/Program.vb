@@ -32,7 +32,7 @@ Friend Class Program
                 Dim login As DialogResult = lofrm.ShowDialog()
 
                 If login = DialogResult.OK Then
-                    Dim frmm As consldtranslist = New consldtranslist(lofrm.ERPSession, lofrm.Company, lofrm.SesDate)
+                    Dim frmm As consldtrialbal = New consldtrialbal(lofrm.ERPSession, lofrm.Company, lofrm.SesDate)
                     Application.Run(frmm)
                 Else
                     Application.[Exit]()
@@ -53,7 +53,7 @@ Friend Class Program
                 Application.[Exit]()
             End Try
         Else
-            Dim frm As consldtranslist = New consldtranslist(args(0))
+            Dim frm As consldtrialbal = New consldtrialbal(args(0))
             Application.Run(frm)
         End If
     End Sub
