@@ -5,8 +5,6 @@ Imports CrystalDecisions.Windows.Forms
 Imports System.Security.Cryptography
 Imports System.IO
 Imports System.Text
-Imports System.Data
-Imports System.Data.SqlClient
 Imports acc = ACCPAC.Advantage
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
 
@@ -195,7 +193,7 @@ Friend Class crviewer
 
 
 
-            rdoc.Load("reports\GLTRIALOPTRAMALLPROV.rpt")
+            rdoc.Load("reports\GLTRIALOPTPROV.rpt")
 
 
             Dim tabs As Tables = rdoc.Database.Tables
@@ -214,75 +212,36 @@ Friend Class crviewer
                 TAB.ApplyLogOnInfo(tablog)
             Next
 
-            Dim sec As Section
-            Dim secs As Sections
-            Dim rob As ReportObject
-            Dim robs As ReportObjects
-            Dim subrpobj As SubreportObject
-            Dim subrp As ReportDocument
-            Dim crSubTables As Tables
-            Dim crsubtable As Table
-            secs = rdoc.ReportDefinition.Sections
-            Dim crtableLogoninfo As New TableLogOnInfo
-            Dim ConInfo As New CrystalDecisions.Shared.TableLogOnInfo
-            Dim subConInfo As New ConnectionInfo
-            For Each sec In secs
-                robs = sec.ReportObjects
-                For Each rob In robs
-                    If rob.Kind = ReportObjectKind.SubreportObject Then
-                        subrpobj = CType(rob, SubreportObject)
-                        subrp = subrpobj.OpenSubreport(subrpobj.SubreportName)
 
 
-                        If subrp.Name = "gltransactionbb" Then
-                            crSubTables = subrp.Database.Tables
-                            For Each crsubtable In crSubTables
-                                crtableLogoninfo = crsubtable.LogOnInfo
-                                subConInfo.ServerName = server
-                                subConInfo.DatabaseName = ccompid
-                                subConInfo.UserID = uid
-                                subConInfo.Password = pass
-                                crtableLogoninfo.ConnectionInfo = subConInfo
-                                crsubtable.ApplyLogOnInfo(crtableLogoninfo)
-                            Next
-                        End If
-                        If subrp.Name = "hbb" Then
-                            crSubTables = subrp.Database.Tables
-                            For Each crsubtable In crSubTables
-                                crtableLogoninfo = crsubtable.LogOnInfo
-                                subConInfo.ServerName = server
-                                subConInfo.DatabaseName = ccompid
-                                subConInfo.UserID = uid
-                                subConInfo.Password = pass
-                                crtableLogoninfo.ConnectionInfo = subConInfo
-                                crsubtable.ApplyLogOnInfo(crtableLogoninfo)
-                            Next
-                        End If
-                    End If
 
-                Next
-            Next
-
-
-            Dim entity As String = ""
+            Dim entity1 As String = ""
+            Dim entity2 As String = ""
+            Dim entity3 As String = ""
+            Dim entity4 As String = ""
+            Dim entity5 As String = ""
             If crbram = True Then
-                entity = "RAMDAT,"
+                entity1 = "RAMDAT"
             End If
-            If crbgen = True Then
-                entity = entity + "GENDAT,"
-            End If
+            'If crbgen = True Then
+            '    entity = entity + "GENDAT,"
+            'End If
             If crbjor = True Then
-                entity = entity + "JORDAT,"
+                entity2 = "JORDAT"
             End If
             If crbocj = True Then
-                entity = entity + "OCJDAT,"
+                entity3 = "OCJDAT"
             End If
             If crbleb = True Then
-                entity = entity + "LEBDAT,"
+                entity4 = "LEBDAT"
             End If
-            entity = entity.Substring(0, entity.Length() - 1)
-            rdoc.SetParameterValue("fromdate", cfdate)
-            rdoc.SetParameterValue("todate", ctdate)
+
+            If crbgen = True Then
+                entity5 = "GENDAT"
+            End If
+            ' entity = entity.Substring(0, entity.Length() - 1)
+            rdoc.SetParameterValue("fromyp", cfdate)
+            rdoc.SetParameterValue("toyp", ctdate)
 
             rdoc.SetParameterValue("fromacct", cfacct)
             rdoc.SetParameterValue("toacct", ctacct)
@@ -356,9 +315,12 @@ Friend Class crviewer
             rdoc.SetParameterValue("fromprogs", cfprogs)
             rdoc.SetParameterValue("toprogs", ctprogs)
 
-            rdoc.SetParameterValue("entity", entity)
-
-            rdoc.SetParameterValue("CMPNAME", ccompname)
+            rdoc.SetParameterValue("entity1", entity1)
+            rdoc.SetParameterValue("entity2", entity2)
+            rdoc.SetParameterValue("entity3", entity3)
+            rdoc.SetParameterValue("entity4", entity4)
+            rdoc.SetParameterValue("entity5", entity5)
+            ' rdoc.SetParameterValue("CMPNAME", ccompname)
             cwvr.ReportSource = rdoc
 
         Catch ex As Exception

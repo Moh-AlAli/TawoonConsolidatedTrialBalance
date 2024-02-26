@@ -49,7 +49,7 @@ Public Class consldtrialbal
             End If
 
 
-            Me.Text = compid + " - " + "Consolidated Trans.List"
+            Me.Text = compid + " - " + "Consolidated Trial Balance"
             Txttoacct.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttarea.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttben.Text = "zzzzzzzzzzzzzzzzzzzzzz"
@@ -74,6 +74,16 @@ Public Class consldtrialbal
             Txttsubt.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txtttype.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttcat.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+
+            If Date.Now.Month < 10 Then
+                txtfrmprd.Text = "0" & Date.Now.Month
+                txttoprd.Text = "0" & Date.Now.Month
+            Else
+                txtfrmprd.Text = Date.Now.Month
+                txttoprd.Text = Date.Now.Month
+            End If
+            txtfrmyear.Text = Date.Now.Year
+            txttoyear.Text = Date.Now.Year
         Catch ex As Exception
             MessageBox.Show(ex.Message)
             Close()
@@ -87,38 +97,23 @@ Public Class consldtrialbal
 
             Dim fmonthnew As String = 0
 
-            If DateTimePicker1.Value.Month.ToString.Length < 2 Then
-                fmonthnew = "0" & DateTimePicker1.Value.Month
+            If txtfrmprd.Text < 10 Then
+                fmonthnew = "0" & Integer.Parse(txtfrmprd.Text)
             Else
-                fmonthnew = DateTimePicker1.Value.Month
+                fmonthnew = txtfrmprd.Text
             End If
             Dim tmonthnew As String = 0
-            If DateTimePicker2.Value.Month.ToString.Length < 2 Then
-                tmonthnew = "0" & DateTimePicker2.Value.Month
+            If txtfrmprd.Text < 10 Then
+                tmonthnew = "0" & Integer.Parse(txttoprd.Text)
             Else
-                tmonthnew = DateTimePicker2.Value.Month
+                tmonthnew = txttoprd.Text
             End If
 
-            Dim fdaynew As String = 0
 
-            If DateTimePicker1.Value.Day.ToString.Length < 2 Then
-                fdaynew = "0" & DateTimePicker1.Value.Day
-            Else
-                fdaynew = DateTimePicker1.Value.Day
-            End If
-
-            Dim tdaynew As String = 0
-
-            If DateTimePicker2.Value.Day.ToString.Length < 2 Then
-                tdaynew = "0" & DateTimePicker2.Value.Day
-            Else
-                tdaynew = DateTimePicker2.Value.Day
-            End If
-
-            fdate = DateTimePicker1.Value.Year & fmonthnew & fdaynew
-
-            tdate = DateTimePicker2.Value.Year & tmonthnew & tdaynew
-
+            fdate = Integer.Parse(txtfrmyear.Text) & "-" & fmonthnew
+            tdate = Integer.Parse(txttoyear.Text) & "-" & tmonthnew
+            Dim vfyper As Integer = Integer.Parse(txtfrmyear.Text) & fmonthnew
+            Dim vtyper As Integer = Integer.Parse(txttoyear.Text) & tmonthnew
             Dim toacct As String = ""
 
             If Txttoacct.Text = Nothing Then
@@ -292,7 +287,7 @@ Public Class consldtrialbal
             End If
 
             If Trim(Txtfrmacct.Text) <= Trim(Txttoacct.Text) Then
-                If fdate <= tdate Then
+                If vfyper <= vtyper Then
                     Dim f As Form = New crviewer(ObjectHandle, ERPSession, Trim(Txtfrmacct.Text), toacct, fdate, tdate, ChRAMDAT.Checked, ChGENDAT.Checked, ChJORDAT.Checked, ChOCJDAT.Checked, ChLEBDAT.Checked, Trim(Txtftype.Text), Trim(Txtfsubt.Text), Trim(Txtfcat.Text) _
                     , Trim(Txtfarea.Text), Trim(Txtfben.Text), Trim(Txtfemp.Text), Trim(Txtfgcod.Text), Trim(Txtfprog.Text), Trim(Txtfoff.Text), Trim(Txtfdnr.Text), Trim(Txtfdnew.Text), Trim(Txtfdon.Text), Trim(Txtfgrn.Text), Trim(Txtfdep1.Text), Trim(Txtfdep2.Text), Trim(Txtfdep3.Text), Trim(Txtfdep4.Text) _
                     , Trim(Txtfdep5.Text), Trim(Txtfdep6.Text), Trim(Txtfdep7.Text), Trim(Txtfdep8.Text), Trim(Txtfproj.Text), Trim(Txtfprogs.Text) _
@@ -551,7 +546,7 @@ Public Class consldtrialbal
 
         Else
 
-            Dim vfnd As FromFinder = New FromFinder("OPTFDTYPE", "Type", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDTYPE", "Type", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
 
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
@@ -587,7 +582,7 @@ Public Class consldtrialbal
         If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
             MessageBox.Show("Choose At least one entity!")
 
-        Else Dim vfnd As FromFinder = New FromFinder("OPTFDTYPE", "Type", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+        Else Dim vfnd As FromFinder = New FromFinder("OPTFDTYPE", "Type", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
 
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
@@ -625,7 +620,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDSUBTYPE", "Sub.Type", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDSUBTYPE", "Sub.Type", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
 
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
@@ -663,7 +658,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDSUBTYPE", "Sub.Type", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDSUBTYPE", "Sub.Type", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
 
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
@@ -701,7 +696,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDCATEGORY", "Category", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDCATEGORY", "Category", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
 
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
@@ -739,7 +734,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDCATEGORY", "Category", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDCATEGORY", "Category", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
 
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
@@ -777,7 +772,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDAREA", "AREA", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDAREA", "AREA", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
 
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
@@ -814,7 +809,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDAREA", "AREA", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDAREA", "AREA", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttarea.Text = vfnd.Result.ToArray()(0)
@@ -850,7 +845,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDBENF", "BENEFICIARY", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDBENF", "BENEFICIARY", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfben.Text = vfnd.Result.ToArray()(0)
@@ -887,7 +882,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDBENF", "BENEFICIARY", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDBENF", "BENEFICIARY", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttben.Text = vfnd.Result.ToArray()(0)
@@ -923,7 +918,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDEMP", "Employee", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDEMP", "Employee", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfemp.Text = vfnd.Result.ToArray()(0)
@@ -960,7 +955,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDEMP", "Employee", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDEMP", "Employee", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttemp.Text = vfnd.Result.ToArray()(0)
@@ -996,7 +991,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDGCOD", "GL Code", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDGCOD", "GL Code", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfgcod.Text = vfnd.Result.ToArray()(0)
@@ -1033,7 +1028,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDGCOD", "GL Code", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDGCOD", "GL Code", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttgcod.Text = vfnd.Result.ToArray()(0)
@@ -1069,7 +1064,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfprog.Text = vfnd.Result.ToArray()(0)
@@ -1106,7 +1101,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttprog.Text = vfnd.Result.ToArray()(0)
@@ -1142,7 +1137,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDOFF", "OFFICE", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDOFF", "OFFICE", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfoff.Text = vfnd.Result.ToArray()(0)
@@ -1179,7 +1174,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDOFF", "OFFICE", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDOFF", "OFFICE", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttoff.Text = vfnd.Result.ToArray()(0)
@@ -1215,7 +1210,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdnr.Text = vfnd.Result.ToArray()(0)
@@ -1253,7 +1248,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttdnr.Text = vfnd.Result.ToArray()(0)
@@ -1289,7 +1284,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDNRNEW", "DONORNEW", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDNRNEW", "DONORNEW", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdnew.Text = vfnd.Result.ToArray()(0)
@@ -1326,7 +1321,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDNRNEW", "DONORNEW", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDNRNEW", "DONORNEW", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttdnew.Text = vfnd.Result.ToArray()(0)
@@ -1362,7 +1357,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdon.Text = vfnd.Result.ToArray()(0)
@@ -1399,7 +1394,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttdon.Text = vfnd.Result.ToArray()(0)
@@ -1435,7 +1430,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfgrn.Text = vfnd.Result.ToArray()(0)
@@ -1471,7 +1466,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttgrn.Text = vfnd.Result.ToArray()(0)
@@ -1508,7 +1503,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep1.Text = vfnd.Result.ToArray()(0)
@@ -1545,7 +1540,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttdep1.Text = vfnd.Result.ToArray()(0)
@@ -1581,7 +1576,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep2.Text = vfnd.Result.ToArray()(0)
@@ -1618,7 +1613,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -1655,7 +1650,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP3", "Dept 3", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP3", "Dept 3", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep3.Text = vfnd.Result.ToArray()(0)
@@ -1691,7 +1686,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP3", "Dept 3", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP3", "Dept 3", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -1728,7 +1723,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep4.Text = vfnd.Result.ToArray()(0)
@@ -1765,7 +1760,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txttdep4.Text = vfnd.Result.ToArray()(0)
@@ -1801,7 +1796,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep5.Text = vfnd.Result.ToArray()(0)
@@ -1838,7 +1833,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -1875,7 +1870,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep6.Text = vfnd.Result.ToArray()(0)
@@ -1912,7 +1907,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -1949,7 +1944,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep7.Text = vfnd.Result.ToArray()(0)
@@ -1986,7 +1981,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -2023,7 +2018,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfdep8.Text = vfnd.Result.ToArray()(0)
@@ -2060,7 +2055,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -2097,7 +2092,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROJ", "PROJECT", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDPROJ", "PROJECT", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfproj.Text = vfnd.Result.ToArray()(0)
@@ -2134,7 +2129,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROJ", "PROJECT", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDPROJ", "PROJECT", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -2171,7 +2166,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROGS", "PROGRAMS", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDPROGS", "PROGRAMS", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
                 Txtfprogs.Text = vfnd.Result.ToArray()(0)
@@ -2208,7 +2203,7 @@ Public Class consldtrialbal
             MessageBox.Show("Choose At least one entity!")
 
         Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROGS", "PROGRAMS", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
+            Dim vfnd As FromFinder = New FromFinder("OPTFDPROGS", "PROGRAMS", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
             Dim r As DialogResult = vfnd.ShowDialog(Me)
             If r = DialogResult.OK Then
 
@@ -2219,76 +2214,43 @@ Public Class consldtrialbal
 
     End Sub
 
-    'Private Sub Butffprogcmp_Click(sender As Object, e As EventArgs)
-    '    Dim ram As String = ""
-    '    If ChRAMDAT.Checked = True Then
-    '        ram = "RAMDAT.dbo."
-    '    End If
-    '    Dim gen As String = ""
-    '    If ChGENDAT.Checked = True Then
-    '        gen = "GENDAT.dbo."
-    '    End If
-    '    Dim jor As String = ""
-    '    If ChJORDAT.Checked = True Then
-    '        jor = "JORDAT.dbo."
-    '    End If
-    '    Dim ocj As String = ""
-    '    If ChOCJDAT.Checked = True Then
-    '        ocj = "OCJDAT.dbo."
-    '    End If
-    '    Dim leb As String = ""
-    '    If ChLEBDAT.Checked = True Then
-    '        leb = "LEBDAT.dbo."
-    '    End If
+    Private Sub txtfrmyear_TextChanged(sender As Object, e As EventArgs) Handles txtfrmyear.TextChanged
+        If (System.Text.RegularExpressions.Regex.IsMatch(txtfrmyear.Text, "[^0-9]")) Then
+            MessageBox.Show("Please enter only numbers.")
+            txtfrmyear.Text = txtfrmyear.Text.Remove(txtfrmyear.Text.Length - 1)
+        End If
+        If txtfrmyear.Text.Length > 4 Then
+            txtfrmyear.Text = txtfrmyear.Text.Remove(txtfrmyear.Text.Length - 1)
+        End If
+    End Sub
 
-    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-    '        MessageBox.Show("Choose At least one entity!")
+    Private Sub txttoyear_TextChanged(sender As Object, e As EventArgs) Handles txttoyear.TextChanged
+        If (System.Text.RegularExpressions.Regex.IsMatch(txttoyear.Text, "[^0-9]")) Then
+            MessageBox.Show("Please enter only numbers.")
+            txttoyear.Text = txttoyear.Text.Remove(txttoyear.Text.Length - 1)
+        End If
+        If txttoyear.Text.Length > 4 Then
+            txttoyear.Text = txttoyear.Text.Remove(txttoyear.Text.Length - 1)
+        End If
+    End Sub
 
-    '    Else
-    '        Dim vfnd As FromFinder = New FromFinder("OPTFDPROGSCOMP", "PROGRAMS COMP", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
-    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
-    '        If r = DialogResult.OK Then
-    '            Txtfprogcmp.Text = vfnd.Result.ToArray()(0)
-    '            Txttprogcmp.Text = vfnd.Result.ToArray()(0)
-    '            fndEditBoxValidate(Txtfprogcmp, EventArgs.Empty)
-    '        End If
-    '    End If
+    Private Sub txtfrmprd_TextChanged(sender As Object, e As EventArgs) Handles txtfrmprd.TextChanged
+        If (System.Text.RegularExpressions.Regex.IsMatch(txtfrmprd.Text, "[^0-9]")) Then
+            MessageBox.Show("Please enter only numbers.")
+            txtfrmprd.Text = txtfrmprd.Text.Remove(txtfrmprd.Text.Length - 1)
+        End If
+        If txtfrmprd.Text.Length > 2 Then
+            txtfrmprd.Text = txtfrmprd.Text.Remove(txtfrmprd.Text.Length - 1)
+        End If
+    End Sub
 
-    'End Sub
-
-    'Private Sub Butftprogcmp_Click(sender As Object, e As EventArgs)
-    '    Dim ram As String = ""
-    '    If ChRAMDAT.Checked = True Then
-    '        ram = "RAMDAT.dbo."
-    '    End If
-    '    Dim gen As String = ""
-    '    If ChGENDAT.Checked = True Then
-    '        gen = "GENDAT.dbo."
-    '    End If
-    '    Dim jor As String = ""
-    '    If ChJORDAT.Checked = True Then
-    '        jor = "JORDAT.dbo."
-    '    End If
-    '    Dim ocj As String = ""
-    '    If ChOCJDAT.Checked = True Then
-    '        ocj = "OCJDAT.dbo."
-    '    End If
-    '    Dim leb As String = ""
-    '    If ChLEBDAT.Checked = True Then
-    '        leb = "LEBDAT.dbo."
-    '    End If
-
-    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-    '        MessageBox.Show("Choose At least one entity!")
-
-    '    Else
-    '        Dim vfnd As FromFinder = New FromFinder("OPTFDPROGCOMP", "PROGRAMS COMP", ram, gen, jor, ocj, leb, New String() {"VALUE"}, ERPSession, "", "")
-    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
-    '        If r = DialogResult.OK Then
-
-    '            Txttprogcmp.Text = vfnd.Result.ToArray()(0)
-    '            fndEditBoxValidate(Txttprogs, EventArgs.Empty)
-    '        End If
-    '    End If
-    'End Sub
+    Private Sub txttoprd_TextChanged(sender As Object, e As EventArgs) Handles txttoprd.TextChanged
+        If (System.Text.RegularExpressions.Regex.IsMatch(txttoprd.Text, "[^0-9]")) Then
+            MessageBox.Show("Please enter only numbers.")
+            txttoprd.Text = txttoprd.Text.Remove(txttoprd.Text.Length - 1)
+        End If
+        If txttoprd.Text.Length > 2 Then
+            txttoprd.Text = txttoprd.Text.Remove(txttoprd.Text.Length - 1)
+        End If
+    End Sub
 End Class

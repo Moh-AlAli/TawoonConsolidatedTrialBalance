@@ -31,8 +31,12 @@ Partial Class consldtrialbal
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txttoprd = New System.Windows.Forms.TextBox()
+        Me.txttoyear = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.txtfrmprd = New System.Windows.Forms.TextBox()
+        Me.txtfrmyear = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -259,41 +263,87 @@ Partial Class consldtrialbal
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox2.Controls.Add(Me.Label31)
+        Me.GroupBox2.Controls.Add(Me.txttoprd)
+        Me.GroupBox2.Controls.Add(Me.txttoyear)
+        Me.GroupBox2.Controls.Add(Me.Label30)
+        Me.GroupBox2.Controls.Add(Me.txtfrmprd)
+        Me.GroupBox2.Controls.Add(Me.txtfrmyear)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial Unicode MS", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 283)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 283)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(371, 89)
+        Me.GroupBox2.Size = New System.Drawing.Size(371, 61)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Date"
+        Me.GroupBox2.Text = "Year-Period"
         '
-        'DateTimePicker2
+        'Label31
         '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(80, 51)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(282, 25)
-        Me.DateTimePicker2.TabIndex = 11
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Arial Unicode MS", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(299, 34)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(12, 15)
+        Me.Label31.TabIndex = 48
+        Me.Label31.Text = "-"
         '
-        'DateTimePicker1
+        'txttoprd
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(79, 22)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(285, 25)
-        Me.DateTimePicker1.TabIndex = 10
+        Me.txttoprd.Location = New System.Drawing.Point(315, 31)
+        Me.txttoprd.Margin = New System.Windows.Forms.Padding(4)
+        Me.txttoprd.Multiline = True
+        Me.txttoprd.Name = "txttoprd"
+        Me.txttoprd.Size = New System.Drawing.Size(36, 20)
+        Me.txttoprd.TabIndex = 47
+        '
+        'txttoyear
+        '
+        Me.txttoyear.Location = New System.Drawing.Point(230, 31)
+        Me.txttoyear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txttoyear.Multiline = True
+        Me.txttoyear.Name = "txttoyear"
+        Me.txttoyear.Size = New System.Drawing.Size(66, 20)
+        Me.txttoyear.TabIndex = 46
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Arial Unicode MS", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(121, 34)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(12, 15)
+        Me.Label30.TabIndex = 45
+        Me.Label30.Text = "-"
+        '
+        'txtfrmprd
+        '
+        Me.txtfrmprd.Location = New System.Drawing.Point(139, 32)
+        Me.txtfrmprd.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtfrmprd.Multiline = True
+        Me.txtfrmprd.Name = "txtfrmprd"
+        Me.txtfrmprd.Size = New System.Drawing.Size(36, 20)
+        Me.txtfrmprd.TabIndex = 44
+        '
+        'txtfrmyear
+        '
+        Me.txtfrmyear.Location = New System.Drawing.Point(52, 32)
+        Me.txtfrmyear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtfrmyear.Multiline = True
+        Me.txtfrmyear.Name = "txtfrmyear"
+        Me.txtfrmyear.Size = New System.Drawing.Size(66, 20)
+        Me.txtfrmyear.TabIndex = 43
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Unicode MS", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(8, 59)
+        Me.Label4.Location = New System.Drawing.Point(205, 32)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(22, 15)
@@ -1712,11 +1762,11 @@ Partial Class consldtrialbal
         Me.GroupBox5.Controls.Add(Me.Label6)
         Me.GroupBox5.Controls.Add(Me.Label5)
         Me.GroupBox5.Font = New System.Drawing.Font("Arial Unicode MS", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(3, 380)
+        Me.GroupBox5.Location = New System.Drawing.Point(4, 357)
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox5.Size = New System.Drawing.Size(371, 216)
+        Me.GroupBox5.Size = New System.Drawing.Size(371, 240)
         Me.GroupBox5.TabIndex = 13
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Optional Fileds"
@@ -1935,7 +1985,7 @@ Partial Class consldtrialbal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "consldtrialbal"
-        Me.Text = "Consolidated Transaction Listing"
+        Me.Text = "Consolidated Trial Balance"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -1958,8 +2008,6 @@ Partial Class consldtrialbal
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox3 As GroupBox
@@ -2089,4 +2137,10 @@ Partial Class consldtrialbal
     Friend WithEvents Label22 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label20 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents txttoprd As TextBox
+    Friend WithEvents txttoyear As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents txtfrmprd As TextBox
+    Friend WithEvents txtfrmyear As TextBox
 End Class

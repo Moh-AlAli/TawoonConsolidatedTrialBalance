@@ -60,207 +60,282 @@ Partial Class FromFinder
                     cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Account Number", "C", "ACCTID"), New LookupItem("Description", "C", "ACCTDESC")})
                     Exit Select
                 Case "OPTFDTYPE"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDSUBTYPE"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDCATEGORY"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
 
                 Case "OPTFDAREA"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
 
                 Case "OPTFDBENF"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDEMP"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDGCOD"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDPROG"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDOFF"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDNR"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDNRNEW"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDON"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDGRN"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP1"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP1"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP2"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP3"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP4"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP5"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP6"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP7"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDDEP8"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDPROJ"
                     cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
                      }}
                     lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
-                    Exit Select
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
+                Exit Select
                 Case "OPTFDPROGS"
-                    cols = New ColumnHeader() {New ColumnHeader() With {
+                cols = New ColumnHeader() {New ColumnHeader() With {
                          .Text = "Value",
                          .Width = 300
-                     }}
-                    lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                    cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
+                     }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
+                lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
                 Exit Select
                 Exit Select
             Case "OPTFDPROGSCOMP"
                 cols = New ColumnHeader() {New ColumnHeader() With {
                      .Text = "Value",
                      .Width = 300
-                 }}
+                 }, New ColumnHeader() With {
+                            .Text = "Decription",
+                            .Width = 300
+                        }}
                 lstData.Items.Add(New ListViewItem(New String() {" ", " "}))
-                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE")})
+                cmbFindBy.Items.AddRange(New LookupItem() {New LookupItem("Show All Records", "C", "ALL"), New LookupItem("Value", "C", "VALUE"), New LookupItem("Description", "C", "VDESC")})
                 Exit Select
         End Select
             Text = capt
