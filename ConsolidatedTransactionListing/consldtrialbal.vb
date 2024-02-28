@@ -289,17 +289,15 @@ Public Class consldtrialbal
             If Trim(Txtfrmacct.Text) <= Trim(Txttoacct.Text) Then
                 If vfyper <= vtyper Then
 
-
-
                     Dim f As Form = New crviewer(ObjectHandle, ERPSession, Trim(Txtfrmacct.Text), toacct, fdate, tdate, ChRAMDAT.Checked, ChGENDAT.Checked, ChJORDAT.Checked, ChOCJDAT.Checked, ChLEBDAT.Checked, Trim(Txtftype.Text), Trim(Txtfsubt.Text), Trim(Txtfcat.Text), Trim(Txtfarea.Text), Trim(Txtfben.Text), Trim(Txtfemp.Text), Trim(Txtfgcod.Text), Trim(Txtfprog.Text), Trim(Txtfoff.Text), Trim(Txtfdnr.Text), Trim(Txtfdnew.Text), Trim(Txtfdon.Text), Trim(Txtfgrn.Text), Trim(Txtfdep1.Text), Trim(Txtfdep2.Text), Trim(Txtfdep3.Text), Trim(Txtfdep4.Text) _
                     , Trim(Txtfdep5.Text), Trim(Txtfdep6.Text), Trim(Txtfdep7.Text), Trim(Txtfdep8.Text), Trim(Txtfproj.Text), Trim(Txtfprogs.Text) _
                     , totype, tosubtype, tocat, toarea, toben, toemp, togcod, toprog, tooff, todonr, todnew, todon, togrn, todep1, todep2, todep3, todep4 _
- , todep5, todep6, todep7, todep8, toproj, toprogs)
+                    , todep5, todep6, todep7, todep8, toproj, toprogs)
                     f.Show()
 
                 Else
-                    MessageBox.Show("From Year-Period  greater than To Year=-Period")
-            End If
+                    MessageBox.Show("From Year-Period  greater than To Year-Period")
+                End If
             Else
                 MessageBox.Show("From Account No greater than To Account No")
             End If
