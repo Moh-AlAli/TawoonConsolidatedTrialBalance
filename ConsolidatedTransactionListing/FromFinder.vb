@@ -482,11 +482,11 @@ Partial Class FromFinder
 
             If wsql <> "" Then
 
-                If sql.IndexOf(" where ", StringComparison.CurrentCultureIgnoreCase) <> -1 Then
-                    sql += wsql.Replace("where", "and")
-                Else
-                    sql += wsql
-                End If
+                'If sql.IndexOf(" where ", StringComparison.CurrentCultureIgnoreCase) <> -1 Then
+                '    sql += wsql.Replace("where", "and")
+                'Else
+                sql += wsql
+                'End If
             End If
 
             Dim lnk As acc.DBLink = _ses.OpenDBLink(acc.DBLinkType.Company, acc.DBLinkFlags.[ReadOnly])

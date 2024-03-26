@@ -55,20 +55,20 @@ Public Class consldtrialbal
             Txttben.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttemp.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttgcod.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttprog.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            '  Txttprog.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttoff.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdnr.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            ' Txttdnr.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttdnew.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdon.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttgrn.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdep1.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdep2.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            '  Txttdon.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            ' Txttgrn.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            '  Txttdep1.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            '   Txttdep2.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttdep3.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdep4.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdep5.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdep6.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdep7.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-            Txttdep8.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            '  Txttdep4.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            '  Txttdep5.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            '  Txttdep6.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            ' Txttdep7.Text = "zzzzzzzzzzzzzzzzzzzzzz"
+            ' Txttdep8.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttproj.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttprogs.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttsubt.Text = "zzzzzzzzzzzzzzzzzzzzzz"
@@ -149,12 +149,12 @@ Public Class consldtrialbal
             End If
 
 
-            Dim toprog As String = ""
-            If Txttprog.Text = Nothing Then
-                toprog = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                toprog = Trim(Txttprog.Text)
-            End If
+            Dim toprog As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttprog.Text = Nothing Then
+            '    toprog = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    toprog = Trim(Txttprog.Text)
+            'End If
 
 
             Dim tooff As String = ""
@@ -164,12 +164,12 @@ Public Class consldtrialbal
                 tooff = Trim(Txttoff.Text)
             End If
 
-            Dim todonr As String = ""
-            If Txttdnr.Text = Nothing Then
-                todonr = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todonr = Trim(Txttdnr.Text)
-            End If
+            Dim todonr As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdnr.Text = Nothing Then
+            '    todonr = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todonr = Trim(Txttdnr.Text)
+            'End If
 
             Dim todnew As String = ""
             If Txttdnew.Text = Nothing Then
@@ -179,35 +179,35 @@ Public Class consldtrialbal
             End If
 
 
-            Dim todon As String = ""
-            If Txttdon.Text = Nothing Then
-                todon = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todon = Trim(Txttdon.Text)
-            End If
+            Dim todon As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdon.Text = Nothing Then
+            '    todon = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todon = Trim(Txttdon.Text)
+            'End If
 
 
-            Dim togrn As String = ""
-            If Txttgrn.Text = Nothing Then
-                togrn = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                togrn = Trim(Txttgrn.Text)
-            End If
+            Dim togrn As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttgrn.Text = Nothing Then
+            '    togrn = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    togrn = Trim(Txttgrn.Text)
+            'End If
 
 
-            Dim todep1 As String = ""
-            If Txttdep1.Text = Nothing Then
-                todep1 = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todep1 = Trim(Txttdep1.Text)
-            End If
+            Dim todep1 As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdep1.Text = Nothing Then
+            '    todep1 = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todep1 = Trim(Txttdep1.Text)
+            'End If
 
-            Dim todep2 As String = ""
-            If Txttdep2.Text = Nothing Then
-                todep2 = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todep2 = Trim(Txttdep2.Text)
-            End If
+            Dim todep2 As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdep2.Text = Nothing Then
+            '    todep2 = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todep2 = Trim(Txttdep2.Text)
+            'End If
 
             Dim todep3 As String = ""
             If Txttdep3.Text = Nothing Then
@@ -216,47 +216,47 @@ Public Class consldtrialbal
                 todep3 = Trim(Txttdep3.Text)
             End If
 
-            Dim todep4 As String = ""
-            If Txttdep4.Text = Nothing Then
-                todep4 = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todep4 = Trim(Txttdep4.Text)
-            End If
+            Dim todep4 As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdep4.Text = Nothing Then
+            '    todep4 = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todep4 = Trim(Txttdep4.Text)
+            'End If
 
-            Dim todep5 As String = ""
-            If Txttdep5.Text = Nothing Then
-                todep5 = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todep5 = Trim(Txttdep5.Text)
-            End If
+            Dim todep5 As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdep5.Text = Nothing Then
+            '    todep5 = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todep5 = Trim(Txttdep5.Text)
+            'End If
 
-            Dim todep6 As String = ""
-            If Txttdep6.Text = Nothing Then
-                todep6 = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todep6 = Trim(Txttdep6.Text)
-            End If
+            Dim todep6 As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdep6.Text = Nothing Then
+            '    todep6 = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todep6 = Trim(Txttdep6.Text)
+            'End If
 
-            Dim todep7 As String = ""
-            If Txttdep7.Text = Nothing Then
-                todep7 = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todep7 = Trim(Txttdep7.Text)
-            End If
+            Dim todep7 As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdep7.Text = Nothing Then
+            '    todep7 = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todep7 = Trim(Txttdep7.Text)
+            'End If
 
-            Dim todep8 As String = ""
-            If Txttdep8.Text = Nothing Then
-                todep8 = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                todep8 = Trim(Txttdep8.Text)
-            End If
+            Dim todep8 As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttdep8.Text = Nothing Then
+            '    todep8 = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    todep8 = Trim(Txttdep8.Text)
+            'End If
 
-            Dim toproj As String = ""
-            If Txttproj.Text = Nothing Then
-                toproj = "zzzzzzzzzzzzzzzzzzzzzz"
-            Else
-                toproj = Trim(Txttproj.Text)
-            End If
+            Dim toproj As String = "zzzzzzzzzzzzzzzzzzzzzz"
+            'If Txttproj.Text = Nothing Then
+            '    toproj = "zzzzzzzzzzzzzzzzzzzzzz"
+            'Else
+            '    toproj = Trim(Txttproj.Text)
+            'End If
 
             Dim toprogs As String = ""
             If Txttprogs.Text = Nothing Then
@@ -289,8 +289,8 @@ Public Class consldtrialbal
             If Trim(Txtfrmacct.Text) <= Trim(Txttoacct.Text) Then
                 If vfyper <= vtyper Then
 
-                    Dim f As Form = New crviewer(ObjectHandle, ERPSession, Trim(Txtfrmacct.Text), toacct, fdate, tdate, ChRAMDAT.Checked, ChGENDAT.Checked, ChJORDAT.Checked, ChOCJDAT.Checked, ChLEBDAT.Checked, Trim(Txtftype.Text), Trim(Txtfsubt.Text), Trim(Txtfcat.Text), Trim(Txtfarea.Text), Trim(Txtfben.Text), Trim(Txtfemp.Text), Trim(Txtfgcod.Text), Trim(Txtfprog.Text), Trim(Txtfoff.Text), Trim(Txtfdnr.Text), Trim(Txtfdnew.Text), Trim(Txtfdon.Text), Trim(Txtfgrn.Text), Trim(Txtfdep1.Text), Trim(Txtfdep2.Text), Trim(Txtfdep3.Text), Trim(Txtfdep4.Text) _
-                    , Trim(Txtfdep5.Text), Trim(Txtfdep6.Text), Trim(Txtfdep7.Text), Trim(Txtfdep8.Text), Trim(Txtfproj.Text), Trim(Txtfprogs.Text) _
+                    Dim f As Form = New crviewer(ObjectHandle, ERPSession, Trim(Txtfrmacct.Text), toacct, fdate, tdate, ChRAMDAT.Checked, ChGENDAT.Checked, ChJORDAT.Checked, ChOCJDAT.Checked, ChLEBDAT.Checked, Trim(Txtftype.Text), Trim(Txtfsubt.Text), Trim(Txtfcat.Text), Trim(Txtfarea.Text), Trim(Txtfben.Text), Trim(Txtfemp.Text), Trim(Txtfgcod.Text), Trim(""), Trim(Txtfoff.Text), Trim(""), Trim(Txtfdnew.Text), Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfdep3.Text), Trim("") _
+                    , Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfproj.Text), Trim(Txtfprogs.Text) _
                     , totype, tosubtype, tocat, toarea, toben, toemp, togcod, toprog, tooff, todonr, todnew, todon, togrn, todep1, todep2, todep3, todep4 _
                     , todep5, todep6, todep7, todep8, toproj, toprogs)
                     f.Show()
@@ -1038,78 +1038,78 @@ Public Class consldtrialbal
 
     End Sub
 
-    Private Sub Butffprog_Click(sender As Object, e As EventArgs) Handles Butffprog.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffprog_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfprog.Text = vfnd.Result.ToArray()(0)
-                Txttprog.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfprog, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfprog.Text = vfnd.Result.ToArray()(0)
+    '            Txttprog.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfprog, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftprog_Click(sender As Object, e As EventArgs) Handles Butftprog.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftprog_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txttprog.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfprog, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDPROG", "Program", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txttprog.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfprog, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     Private Sub Butffoff_Click(sender As Object, e As EventArgs) Handles Butffoff.Click
         Dim ram As String = ""
@@ -1184,79 +1184,79 @@ Public Class consldtrialbal
 
     End Sub
 
-    Private Sub Butffdonr_Click(sender As Object, e As EventArgs) Handles Butffdonr.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdonr_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdnr.Text = vfnd.Result.ToArray()(0)
-                Txttdnr.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdnr, EventArgs.Empty)
-            End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdnr.Text = vfnd.Result.ToArray()(0)
+    '            Txttdnr.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdnr, EventArgs.Empty)
+    '        End If
 
-        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdonr_Click(sender As Object, e As EventArgs) Handles Butftdonr.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdonr_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txttdnr.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdnr, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDNR", "DONOR", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txttdnr.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdnr, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     Private Sub Butffdnew_Click(sender As Object, e As EventArgs) Handles Butffdnew.Click
         Dim ram As String = ""
@@ -1331,298 +1331,298 @@ Public Class consldtrialbal
 
     End Sub
 
-    Private Sub Butffdon_Click(sender As Object, e As EventArgs) Handles Butffdon.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdon_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdon.Text = vfnd.Result.ToArray()(0)
-                Txttdon.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdon, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdon.Text = vfnd.Result.ToArray()(0)
+    '            Txttdon.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdon, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdon_Click(sender As Object, e As EventArgs) Handles Butftdon.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdon_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txttdon.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdon, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDON", "DONATION", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txttdon.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdon, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butffgrn_Click(sender As Object, e As EventArgs) Handles Butffgrn.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffgrn_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfgrn.Text = vfnd.Result.ToArray()(0)
-                Txttgrn.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfgrn, EventArgs.Empty)
-            End If
-        End If
-    End Sub
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfgrn.Text = vfnd.Result.ToArray()(0)
+    '            Txttgrn.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfgrn, EventArgs.Empty)
+    '        End If
+    '    End If
+    'End Sub
 
-    Private Sub Butftgrn_Click(sender As Object, e As EventArgs) Handles Butftgrn.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftgrn_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txttgrn.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttgrn, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDGRN", "Grant", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txttgrn.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttgrn, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butffdep1_Click(sender As Object, e As EventArgs) Handles Butffdep1.Click
+    'Private Sub Butffdep1_Click(sender As Object, e As EventArgs)
 
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdep1.Text = vfnd.Result.ToArray()(0)
-                Txttdep1.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdep1, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdep1.Text = vfnd.Result.ToArray()(0)
+    '            Txttdep1.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdep1, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdep1_Click(sender As Object, e As EventArgs) Handles Butftdep1.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdep1_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txttdep1.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdep1, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP1", "Dept 1", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txttdep1.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdep1, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butffdep2_Click(sender As Object, e As EventArgs) Handles Butffdep2.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdep2_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdep2.Text = vfnd.Result.ToArray()(0)
-                Txttdep2.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdep2, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdep2.Text = vfnd.Result.ToArray()(0)
+    '            Txttdep2.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdep2, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdep2_Click(sender As Object, e As EventArgs) Handles Butftdep2.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdep2_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP2", "Dept 2", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
 
-                Txttdep2.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdep2, EventArgs.Empty)
-            End If
-        End If
+    '            Txttdep2.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdep2, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     Private Sub Butffdep3_Click(sender As Object, e As EventArgs) Handles Butffdep3.Click
         Dim ram As String = ""
@@ -1697,374 +1697,374 @@ Public Class consldtrialbal
 
     End Sub
 
-    Private Sub Butffdep4_Click(sender As Object, e As EventArgs) Handles Butffdep4.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdep4_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdep4.Text = vfnd.Result.ToArray()(0)
-                Txttdep4.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdep4, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdep4.Text = vfnd.Result.ToArray()(0)
+    '            Txttdep4.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdep4, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdep4_Click(sender As Object, e As EventArgs) Handles Butftdep4.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdep4_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txttdep4.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdep4, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP4", "Dept 4", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txttdep4.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdep4, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butffdep5_Click(sender As Object, e As EventArgs) Handles Butffdep5.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdep5_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdep5.Text = vfnd.Result.ToArray()(0)
-                Txttdep5.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdep5, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdep5.Text = vfnd.Result.ToArray()(0)
+    '            Txttdep5.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdep5, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdep5_Click(sender As Object, e As EventArgs) Handles Butftdep5.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdep5_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP5", "Dept 5", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
 
-                Txttdep5.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdep5, EventArgs.Empty)
-            End If
-        End If
+    '            Txttdep5.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdep5, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butffdep6_Click(sender As Object, e As EventArgs) Handles Butffdep6.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdep6_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdep6.Text = vfnd.Result.ToArray()(0)
-                Txttdep6.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdep6, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdep6.Text = vfnd.Result.ToArray()(0)
+    '            Txttdep6.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdep6, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdep6_Click(sender As Object, e As EventArgs) Handles Butftdep6.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdep6_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP6", "Dept 6", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
 
-                Txttdep6.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdep6, EventArgs.Empty)
-            End If
-        End If
+    '            Txttdep6.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdep6, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butffdep7_Click(sender As Object, e As EventArgs) Handles Butffdep7.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdep7_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdep7.Text = vfnd.Result.ToArray()(0)
-                Txttdep7.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdep7, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdep7.Text = vfnd.Result.ToArray()(0)
+    '            Txttdep7.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdep7, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdep7_Click(sender As Object, e As EventArgs) Handles Butftdep7.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdep7_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP7", "Dept 7", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
 
-                Txttdep7.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdep7, EventArgs.Empty)
-            End If
-        End If
+    '            Txttdep7.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdep7, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butffdep8_Click(sender As Object, e As EventArgs) Handles Butffdep8.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butffdep8_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
-                Txtfdep8.Text = vfnd.Result.ToArray()(0)
-                Txttdep8.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txtfdep8, EventArgs.Empty)
-            End If
-        End If
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
+    '            Txtfdep8.Text = vfnd.Result.ToArray()(0)
+    '            Txttdep8.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txtfdep8, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub Butftdep8_Click(sender As Object, e As EventArgs) Handles Butftdep8.Click
-        Dim ram As String = ""
-        If ChRAMDAT.Checked = True Then
-            ram = "RAMDAT.dbo."
-        End If
-        Dim gen As String = ""
-        If ChGENDAT.Checked = True Then
-            gen = "GENDAT.dbo."
-        End If
-        Dim jor As String = ""
-        If ChJORDAT.Checked = True Then
-            jor = "JORDAT.dbo."
-        End If
-        Dim ocj As String = ""
-        If ChOCJDAT.Checked = True Then
-            ocj = "OCJDAT.dbo."
-        End If
-        Dim leb As String = ""
-        If ChLEBDAT.Checked = True Then
-            leb = "LEBDAT.dbo."
-        End If
+    'Private Sub Butftdep8_Click(sender As Object, e As EventArgs)
+    '    Dim ram As String = ""
+    '    If ChRAMDAT.Checked = True Then
+    '        ram = "RAMDAT.dbo."
+    '    End If
+    '    Dim gen As String = ""
+    '    If ChGENDAT.Checked = True Then
+    '        gen = "GENDAT.dbo."
+    '    End If
+    '    Dim jor As String = ""
+    '    If ChJORDAT.Checked = True Then
+    '        jor = "JORDAT.dbo."
+    '    End If
+    '    Dim ocj As String = ""
+    '    If ChOCJDAT.Checked = True Then
+    '        ocj = "OCJDAT.dbo."
+    '    End If
+    '    Dim leb As String = ""
+    '    If ChLEBDAT.Checked = True Then
+    '        leb = "LEBDAT.dbo."
+    '    End If
 
-        If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
-            MessageBox.Show("Choose At least one entity!")
+    '    If ram = "" And jor = "" And gen = "" And ocj = "" And leb = "" Then
+    '        MessageBox.Show("Choose At least one entity!")
 
-        Else
-            Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
-            Dim r As DialogResult = vfnd.ShowDialog(Me)
-            If r = DialogResult.OK Then
+    '    Else
+    '        Dim vfnd As FromFinder = New FromFinder("OPTFDDEP8", "Dept 8", ram, gen, jor, ocj, leb, New String() {"VALUE", "VDESC"}, ERPSession, "", "")
+    '        Dim r As DialogResult = vfnd.ShowDialog(Me)
+    '        If r = DialogResult.OK Then
 
-                Txttdep8.Text = vfnd.Result.ToArray()(0)
-                fndEditBoxValidate(Txttdep8, EventArgs.Empty)
-            End If
-        End If
+    '            Txttdep8.Text = vfnd.Result.ToArray()(0)
+    '            fndEditBoxValidate(Txttdep8, EventArgs.Empty)
+    '        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     Private Sub Butffproj_Click(sender As Object, e As EventArgs) Handles Butffproj.Click
         Dim ram As String = ""
@@ -2253,4 +2253,6 @@ Public Class consldtrialbal
             txttoprd.Text = txttoprd.Text.Remove(txttoprd.Text.Length - 1)
         End If
     End Sub
+
+
 End Class
