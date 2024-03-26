@@ -338,22 +338,28 @@ Public Class consldtrialbal
                 tocat = Trim(Txttcat.Text)
             End If
 
-            If Trim(Txtfrmacct.Text) <= Trim(Txttoacct.Text) Then
-                If vfyper <= vtyper Then
+            If ChOCJDAT.Checked = True Or ChLEBDAT.Checked = True Or ChJORDAT.Checked = True Or ChGENDAT.Checked = True Or ChRAMDAT.Checked = True Then
 
-                    Dim f As Form = New crviewer(ObjectHandle, ERPSession, Trim(Txtfrmacct.Text), toacct, fdate, tdate, ChRAMDAT.Checked, ChGENDAT.Checked, ChJORDAT.Checked, ChOCJDAT.Checked, ChLEBDAT.Checked, Trim(Txtftype.Text), Trim(Txtfsubt.Text), Trim(Txtfcat.Text), Trim(Txtfarea.Text), Trim(Txtfben.Text), Trim(Txtfemp.Text), Trim(Txtfgcod.Text), Trim(""), Trim(Txtfoff.Text), Trim(""), Trim(Txtfdnew.Text), Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfdep3.Text), Trim("") _
-                    , Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfproj.Text), Trim(Txtfprogs.Text) _
-                    , totype, tosubtype, tocat, toarea, toben, toemp, togcod, toprog, tooff, todonr, todnew, todon, togrn, todep1, todep2, todep3, todep4 _
-                    , todep5, todep6, todep7, todep8, toproj, toprogs)
-                    f.Show()
 
+                If Trim(Txtfrmacct.Text) <= Trim(Txttoacct.Text) Then
+                    If vfyper <= vtyper Then
+
+                        Dim f As Form = New crviewer(ObjectHandle, ERPSession, Trim(Txtfrmacct.Text), toacct, fdate, tdate, ChRAMDAT.Checked, ChGENDAT.Checked, ChJORDAT.Checked, ChOCJDAT.Checked, ChLEBDAT.Checked, Trim(Txtftype.Text), Trim(Txtfsubt.Text), Trim(Txtfcat.Text), Trim(Txtfarea.Text), Trim(Txtfben.Text), Trim(Txtfemp.Text), Trim(Txtfgcod.Text), Trim(""), Trim(Txtfoff.Text), Trim(""), Trim(Txtfdnew.Text), Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfdep3.Text), Trim("") _
+                        , Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfproj.Text), Trim(Txtfprogs.Text) _
+                        , totype, tosubtype, tocat, toarea, toben, toemp, togcod, toprog, tooff, todonr, todnew, todon, togrn, todep1, todep2, todep3, todep4 _
+                        , todep5, todep6, todep7, todep8, toproj, toprogs)
+                        f.Show()
+
+                    Else
+                        MessageBox.Show("From Year-Period  greater than To Year-Period")
+                    End If
                 Else
-                    MessageBox.Show("From Year-Period  greater than To Year-Period")
+                    MessageBox.Show("From Account No greater than To Account No")
                 End If
             Else
-                MessageBox.Show("From Account No greater than To Account No")
-            End If
 
+                MessageBox.Show("Choose Entity !")
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
