@@ -347,7 +347,7 @@ Public Class consldtrialbal
                         Dim f As Form = New crviewer(ObjectHandle, ERPSession, Trim(Txtfrmacct.Text), toacct, fdate, tdate, ChRAMDAT.Checked, ChGENDAT.Checked, ChJORDAT.Checked, ChOCJDAT.Checked, ChLEBDAT.Checked, Trim(Txtftype.Text), Trim(Txtfsubt.Text), Trim(Txtfcat.Text), Trim(Txtfarea.Text), Trim(Txtfben.Text), Trim(Txtfemp.Text), Trim(Txtfgcod.Text), Trim(""), Trim(Txtfoff.Text), Trim(""), Trim(Txtfdnew.Text), Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfdep3.Text), Trim("") _
                         , Trim(""), Trim(""), Trim(""), Trim(""), Trim(Txtfproj.Text), Trim(Txtfprogs.Text) _
                         , totype, tosubtype, tocat, toarea, toben, toemp, togcod, toprog, tooff, todonr, todnew, todon, togrn, todep1, todep2, todep3, todep4 _
-                        , todep5, todep6, todep7, todep8, toproj, toprogs)
+                        , todep5, todep6, todep7, todep8, toproj, toprogs, rbinclprov.Checked, rbnotinclprov.Checked)
                         f.Show()
 
                     Else

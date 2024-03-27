@@ -111,11 +111,15 @@ Partial Class consldtrialbal
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.rbnotinclprov = New System.Windows.Forms.RadioButton()
+        Me.rbinclprov = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -675,7 +679,7 @@ Partial Class consldtrialbal
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox3.Size = New System.Drawing.Size(455, 593)
+        Me.GroupBox3.Size = New System.Drawing.Size(455, 516)
         Me.GroupBox3.TabIndex = 14
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Transaction Optional Fileds"
@@ -1211,11 +1215,48 @@ Partial Class consldtrialbal
         Me.Label10.TabIndex = 43
         Me.Label10.Text = "Area"
         '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.rbnotinclprov)
+        Me.GroupBox6.Controls.Add(Me.rbinclprov)
+        Me.GroupBox6.Font = New System.Drawing.Font("Arial Unicode MS", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox6.Location = New System.Drawing.Point(382, 517)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox6.Size = New System.Drawing.Size(455, 80)
+        Me.GroupBox6.TabIndex = 139
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Provisional.Post"
+        '
+        'rbnotinclprov
+        '
+        Me.rbnotinclprov.AutoSize = True
+        Me.rbnotinclprov.Location = New System.Drawing.Point(331, 32)
+        Me.rbnotinclprov.Name = "rbnotinclprov"
+        Me.rbnotinclprov.Size = New System.Drawing.Size(109, 23)
+        Me.rbnotinclprov.TabIndex = 1
+        Me.rbnotinclprov.TabStop = True
+        Me.rbnotinclprov.Text = "Not Include"
+        Me.rbnotinclprov.UseVisualStyleBackColor = True
+        '
+        'rbinclprov
+        '
+        Me.rbinclprov.AutoSize = True
+        Me.rbinclprov.Location = New System.Drawing.Point(13, 36)
+        Me.rbinclprov.Name = "rbinclprov"
+        Me.rbinclprov.Size = New System.Drawing.Size(79, 23)
+        Me.rbinclprov.TabIndex = 0
+        Me.rbinclprov.TabStop = True
+        Me.rbinclprov.Text = "Include"
+        Me.rbinclprov.UseVisualStyleBackColor = True
+        '
         'consldtrialbal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(850, 640)
+        Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.Bexit)
@@ -1237,6 +1278,8 @@ Partial Class consldtrialbal
         Me.GroupBox5.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1329,4 +1372,7 @@ Partial Class consldtrialbal
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents rbnotinclprov As RadioButton
+    Friend WithEvents rbinclprov As RadioButton
 End Class

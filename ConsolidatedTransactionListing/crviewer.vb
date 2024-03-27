@@ -73,7 +73,8 @@ Friend Class crviewer
     Private ctproj As String
     Private cfprogs As String
     Private ctprogs As String
-
+    Private cincldprov As Boolean
+    Private cnotcincldprov As Boolean
     Friend Property ObjectHandle As String
     Friend Function createdes(ByVal key As String) As TripleDES
         Dim md5 As MD5 = New MD5CryptoServiceProvider()
@@ -110,7 +111,7 @@ Friend Class crviewer
         Return cons
     End Function
     Public Sub New(ByVal _objectHandle As String, ByVal _sess As acc.Session, ByVal facct As String, ByVal tacct As String, ByVal fdate As String, ByVal tdate As String, ByVal rbram As Boolean, ByVal rbgen As Boolean, ByVal rbjor As Boolean, ByVal rbocj As Boolean, ByVal rbleb As Boolean, ByVal opttype As String, ByVal optsubt As String, ByVal optcat As String, ByVal optarea As String, ByVal optbenf As String, ByVal optemp As String, ByVal optgcd As String, ByVal optprog As String, ByVal optoff As String, ByVal optdnr As String, ByVal optdnrnew As String, ByVal optdon As String, ByVal optgrn As String, ByVal optdept1 As String, ByVal optdept2 As String, ByVal optdept3 As String, ByVal optdept4 As String, ByVal optdept5 As String, ByVal optdept6 As String, ByVal optdept7 As String, ByVal optdept8 As String, ByVal optproj As String, ByVal optprogs As String _
-        , ByVal topttype As String, ByVal toptsubt As String, ByVal toptcat As String, ByVal toptarea As String, ByVal toptbenf As String, ByVal toptemp As String, ByVal toptgcd As String, ByVal toptprog As String, ByVal toptoff As String, ByVal toptdnr As String, ByVal toptdnrnew As String, ByVal toptdon As String, ByVal toptgrn As String, ByVal toptdept1 As String, ByVal toptdept2 As String, ByVal toptdept3 As String, ByVal toptdept4 As String, ByVal toptdept5 As String, ByVal toptdept6 As String, ByVal toptdept7 As String, ByVal toptdept8 As String, ByVal toptproj As String, ByVal toptprogs As String)
+        , ByVal topttype As String, ByVal toptsubt As String, ByVal toptcat As String, ByVal toptarea As String, ByVal toptbenf As String, ByVal toptemp As String, ByVal toptgcd As String, ByVal toptprog As String, ByVal toptoff As String, ByVal toptdnr As String, ByVal toptdnrnew As String, ByVal toptdon As String, ByVal toptgrn As String, ByVal toptdept1 As String, ByVal toptdept2 As String, ByVal toptdept3 As String, ByVal toptdept4 As String, ByVal toptdept5 As String, ByVal toptdept6 As String, ByVal toptdept7 As String, ByVal toptdept8 As String, ByVal toptproj As String, ByVal toptprogs As String, ByVal incldprov As Boolean, ByVal notincldprov As Boolean)
 
         InitializeComponent()
         ObjectHandle = _objectHandle
@@ -173,6 +174,8 @@ Friend Class crviewer
         ctdep8 = toptdept8
         ctproj = toptproj
         ctprogs = toptprogs
+        cincldprov = incldprov
+        cnotcincldprov = notincldprov
 
     End Sub
 
@@ -190,7 +193,13 @@ Friend Class crviewer
             cwvr.ExportReport()
             Me.Controls.Add(cwvr)
 
+            Dim incltype As String = ""
 
+            If cincldprov = True Then
+                incltype = "ALL"
+            ElseIf cnotcincldprov = True Then
+                incltype = "POST"
+            End If
 
 
             rdoc.Load("reports\GLTRIALOPTPROV.rpt")
@@ -320,6 +329,7 @@ Friend Class crviewer
             rdoc.SetParameterValue("entity3", entity3)
             rdoc.SetParameterValue("entity4", entity4)
             rdoc.SetParameterValue("entity5", entity5)
+            rdoc.SetParameterValue("INCLTYPE", incltype)
             ' rdoc.SetParameterValue("CMPNAME", ccompname)
             cwvr.ReportSource = rdoc
 
