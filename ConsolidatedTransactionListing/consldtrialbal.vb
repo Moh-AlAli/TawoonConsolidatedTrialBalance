@@ -126,7 +126,7 @@ Public Class consldtrialbal
             Txttsubt.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txtttype.Text = "zzzzzzzzzzzzzzzzzzzzzz"
             Txttcat.Text = "zzzzzzzzzzzzzzzzzzzzzz"
-
+            rbinclprov.Checked = True
             If Date.Now.Month < 10 Then
                 txtfrmprd.Text = "0" & Date.Now.Month
                 txttoprd.Text = "0" & Date.Now.Month
